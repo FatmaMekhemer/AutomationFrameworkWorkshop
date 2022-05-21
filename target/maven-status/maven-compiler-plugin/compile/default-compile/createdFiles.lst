@@ -1,0 +1,4 @@
+pages\BasePage.class
+WebActions\BrowserActions.class
+WebActions\UIActions.class
+pages\HomePage.class

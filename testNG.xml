@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="nopcommerce regression suite">
+    <parameter name="browser" value="Chrome"></parameter>
+    <test name="Regression Test" preserve-order="true">
+        <classes>
+            <class name="BaseTest"/>
+
+        </classes>
+    </test>
+</suite>
