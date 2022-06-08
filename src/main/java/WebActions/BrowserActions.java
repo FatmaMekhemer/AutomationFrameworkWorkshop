@@ -2,6 +2,7 @@ package WebActions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.*;
 
@@ -11,6 +12,10 @@ public class BrowserActions {
         if (browser.equals("Chrome")) {
             System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
             drivers.put(ClassName, new ChromeDriver());
+        }
+        if(browser.equalsIgnoreCase("firefox")){
+            System.setProperty("webdriver.gecko.driver","drivers/geckodriver.exe");
+            drivers.put(ClassName, new FirefoxDriver());
         }
     }
 
