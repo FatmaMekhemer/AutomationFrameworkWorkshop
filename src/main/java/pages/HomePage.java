@@ -9,9 +9,15 @@ public class HomePage extends BasePage{
         super(ClassName);
     }
     WebElement loginBtn;
+    WebElement registerButton;
     public void clickOnLoginBtn(){
-        loginBtn=locator.chooseWebElement("ID","");
+
+        loginBtn=locator.chooseWebElement("LinkText","Log in");
         actions.clickBtn(loginBtn);
-        actions.doubleClickBtn(loginBtn);
+    }
+    public void clickOnRegisterBtn(){
+        registerButton=locator.chooseWebElement("LinkText","Register");
+        actions.clickBtn(registerButton);
+
     }
 }

@@ -1,27 +1,22 @@
+import Waits.Wait;
 import WebActions.BrowserActions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HomePage;
 
 public class BaseTest {
     BrowserActions bAction;
     HomePage home;
+     Wait waits;
 
     @Parameters({"browser"})
     @BeforeTest
-    public void setUp(String browser)
+    public void setUp(@Optional("Chrome") String browser)
     {
         bAction= new BrowserActions(browser,"BaseTest");
-        bAction.navigate("https://www.google.com/","BaseTest");
+        bAction.navigate("https://demo.nopcommerce.com/","BaseTest");
     }
 
-    @Test
-    public void testClick()
-    {
-        home = new HomePage("BaseTest");
-    }
+
 
     @AfterTest
     public void tearDown()
